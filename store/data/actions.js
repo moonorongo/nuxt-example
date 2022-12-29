@@ -17,7 +17,9 @@ export default {
     }
 
     if (!cachedData) {
-      const response = await fetch("http://localhost:81");
+      const response = await fetch(
+        "https://rickandmortyapi.com/api/character?page=0"
+      );
       const data = await response.json();
 
       try {
